@@ -54,14 +54,24 @@ Employee.findById = function (id, result) {
 };
 
 Employee.update = function (id, employee, result) {
-    dbConn.query("UPDATE employees SET first_name=?,last_name=?,email=?,phone=?,organization=?,designation=?,salary=? WHERE id = ?", [employee.first_name, employee.last_name, employee.email, employee.phone, employee.organization, employee.designation, employee.salary, id], function (err, res) {
-        if (err) {
-            console.log("error: ", err);
-            result(null, err);
-        } else {
-            result(null, res);
-        }
-    });
+    dbConn.query("UPDATE employees SET first_name=?,last_name=?,email=?,phone=?,gender=?,occupation=?,salary=?,signingstatus=? WHERE id = ?",
+        [employee.first_name,
+        employee.last_name,
+        employee.email,
+        employee.phone,
+        employee.gender,
+        employee.occupation,
+        employee.salary,
+        employee.signingstatus,
+            id],
+        function (err, res) {
+            if (err) {
+                console.log("error: ", err);
+                result(null, err);
+            } else {
+                result(null, res);
+            }
+        });
 };
 
 Employee.delete = function (id, result) {
