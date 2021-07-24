@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "engines": { "node" : "14.16.0" },
+  "engines": {
+    "node": "14.16.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -11,10 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "latest",
     "aws-sdk": "^2.951.0",
     "body-parser": "^1.19.0",
+    "date-and-time": "^1.0.1",
     "dotenv": "^10.0.0",
+    "ejs": "latest",
     "express": "^4.17.1",
     "mysql": "^2.18.1"
   }

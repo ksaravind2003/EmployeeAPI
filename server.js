@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const employeeRoutes = require('./src/Routes/route')
+const date = require('date-and-time');
 
 // create express app
 const app = express();
@@ -17,7 +18,8 @@ app.use('/api/v1/employees', employeeRoutes)
 
 // define a root route
 app.get('/', (req, res) => {
-  res.send(`API to get data from "${database}"`);
+  const now = new Date();
+  res.send(`${date.format(now, 'ddd, MMM DD YYYY HH:mm:ss')}: API to get data from "${database}"`);
 });
 
 // listen for requests
