@@ -19,7 +19,7 @@ app.use('/api/v1/employees', employeeRoutes)
 // define a root route
 app.get('/', (req, res) => {
   const now = new Date();
-  res.send(`${date.format(now, 'ddd, MMM DD YYYY HH:mm:ss')}: API to get data from "${database}"`);
+  res.send(`${date.format(now, 'ddd, MMM DD YYYY HH:mm:ss')}: Employee API to get data from "${database}"`);
 });
 
 // listen for requests

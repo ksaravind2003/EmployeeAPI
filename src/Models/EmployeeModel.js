@@ -63,7 +63,7 @@ Employee.update = function (id, employee, result) {
         employee.occupation,
         employee.salary,
         employee.signingstatus,
-            id],
+        id],
         function (err, res) {
             if (err) {
                 console.log("error: ", err);
